@@ -5,17 +5,10 @@ class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
 
-  @@all = []
-
   def initialize(name)
     @name = name
     @balance = 1000
     @status = "open"
-    @@all << self
-  end
-
-  def self.all
-    @@all
   end
 
   def deposit(positive_deposit_amount)
@@ -23,7 +16,7 @@ class BankAccount
   end
 
   def display_balance
-    puts @balance
+    "Your balance is $#{self.balance}."
   end
 
   def valid?
