@@ -12,7 +12,7 @@ class BankAccount
   end
 
   def deposit(positive_deposit_amount)
-    @balance += positive_deposit_amount
+    self.balance += positive_deposit_amount
   end
 
   def display_balance
@@ -20,11 +20,11 @@ class BankAccount
   end
 
   def valid?
-    @status == "open" && @balance > 0
+    self.status == "open" && self.balance > 0
   end
 
   def close_account
-    @status = "closed"
+    self.status = "closed"
   end
 end
 # binding.pry
